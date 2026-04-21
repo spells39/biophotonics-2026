@@ -144,7 +144,7 @@ def build_x_marginal(
     limit = extent_sigma * sigma
     # Создание бинов
     edges = np.linspace(-limit, limit, bins + 1)
-    # Нормировка гистограммы как полтности вероятности
+    # Нормировка гистограммы как плотности вероятности
     hist, edges = np.histogram(sample.x, bins=edges, density=True)
     # Центры бинов
     centers = 0.5 * (edges[:-1] + edges[1:])
